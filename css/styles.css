@@ -9,16 +9,21 @@ body{
     margin: 0;
 }
 
+h1 {
+    font-size: 2rem;
+    line-height: 1.3em;
+}
+
 .contenedor{
     padding: 60px 0;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
     overflow: hidden;
 }
 
 .titulo{
-    color: #642a73;
+    color: #048872;
     font-size: 30px;
     text-align: center;
     margin-bottom: 60px;
@@ -33,10 +38,16 @@ body{
 }
 
 .header{
-    background: #414141;
+    background: #2e1049;
     width: 100%;
     color: white;
     padding: 2rem 0;
+
+    /* Hace que la cabecera sea fija
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0; */
 }
 
 .header a{
@@ -48,6 +59,17 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.Titulo{
+    margin: 0;
+    letter-spacing: 10px;
+    font-size: 1.7em;
+}
+
+.menu-icon{
+    display: none;
 }
 
 .navigation ul{
@@ -67,14 +89,9 @@ body{
 }
 
 .navigation ul li a:hover{
-    background-color: #4a4a4a;
+    background-color: #4c355f;
 }
 
-.Titulo{
-    margin: 0;
-    letter-spacing: 10px;
-    font-size: 1.5em;
-}
 
 /* nav{
     text-align: right;
@@ -89,6 +106,7 @@ nav > a{
 nav > a:hover{
     text-decoration: underline;
 } */
+
 
 .contenedor-horario, .contenedor-apuntes{
     display: flex;
@@ -148,7 +166,7 @@ nav > a:hover{
 footer{
     background: #414141;
     padding: 60px 0 30px 0;
-    margin: auto;
+    margin-top: 6rem;
     overflow: hidden;
 }
 
@@ -180,4 +198,41 @@ footer{
     font-size: 24px;
     margin: 20px 0 0 0;
     color: #979797;
+}
+
+@media only screen and (max-width: 767px){
+
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .navigation{
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .navigation ul{
+        display: none;
+    }
+
+    .navigation ul.show{
+        display: block;
+    }
+
+    .navigation ul li {
+        display: block;
+    }
+    
+    .navigation ul li a {
+        display: block;
+        padding: 0.5rem 0;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+    
+    .navigation ul li a:hover{
+        background-color: #4c355f;
+    }
 }
