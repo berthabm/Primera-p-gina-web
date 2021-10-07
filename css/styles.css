@@ -63,6 +63,7 @@ h1 {
 }
 
 .Titulo{
+    text-align: center;
     margin: 0;
     letter-spacing: 10px;
     font-size: 1.7em;
@@ -91,22 +92,6 @@ h1 {
 .navigation ul li a:hover{
     background-color: #4c355f;
 }
-
-
-/* nav{
-    text-align: right;
-    padding: 30px 50px 0 0;
-}
-nav > a{
-    font-weight: 300;
-    text-decoration: none;
-    margin-right: 10px;
-}
-
-nav > a:hover{
-    text-decoration: underline;
-} */
-
 
 .contenedor-horario, .contenedor-apuntes{
     display: flex;
@@ -202,9 +187,30 @@ footer{
 
 @media only screen and (max-width: 767px){
 
+    .contenedor-footer{
+        display: inline;
+    }
+
+    .content-foo p{
+        margin-bottom: 40px;
+    }
+
+    .location{ 
+        width: 90%;
+        margin: auto;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #ccc;
+    }
+
     .menu-icon{
         display: block;
         cursor: pointer;
+        padding: 5px 5px;
+    }
+    .menu-icon:hover{
+        transition: all 0.4s linear;
+        background-color: #4c355f;
+        border-radius: 4px;
     }
 
     .navigation{
